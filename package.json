@@ -1,35 +1,41 @@
 {
   "name": "blue-archive-sound-sorter",
-  "version": "1.0.0",
+  "version": "3.0.0",
+  "private": true,
   "description": "Extract BGM files from MediaPatch directory of Blue Archive JP",
-  "main": "index.mjs",
-  "scripts": {
-    "check-update": "npx --yes npm-check-updates",
-    "convert": "node ./index.mjs convert",
-    "sort": "node ./index.mjs sort",
-    "tag": "node ./index.mjs tag"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TetraTheta/BlueArchiveSoundSorter.git"
-  },
   "keywords": [
     "blue-archive"
   ],
-  "author": "TetraTheta",
-  "license": "UNLICENSED",
-  "private": true,
+  "homepage": "https://github.com/TetraTheta/blue-archive-sound-sorter",
   "bugs": {
-    "url": "https://github.com/TetraTheta/BlueArchiveSoundSorter/issues"
+    "url": "https://github.com/TetraTheta/blue-archive-sound-sorter/issues"
   },
-  "homepage": "https://github.com/TetraTheta/BlueArchiveSoundSorter#readme",
-  "devDependencies": {
-    "eslint": "^8.57.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TetraTheta/blue-archive-sound-sorter.git"
+  },
+  "license": "UNLICENSED",
+  "author": "TetraTheta",
+  "main": "index.ts",
+  "scripts": {
+    "bass": "bun run --bun index.ts",
+    "check-update": "bun outdated && bun update && bun install --lockfile-only",
+    "convert": "bun run bass convert",
+    "sort": "bun run bass sort",
+    "tag": "bun run bass tag"
   },
   "dependencies": {
-    "commander": "^12.0.0",
-    "js-yaml": "^4.1.0",
-    "natural-orderby": "^3.0.2",
-    "node-id3": "^0.2.6"
+    "commander": "^13.1.0",
+    "fast-sort": "^3.4.1",
+    "node-id3": "^0.2.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@types/node": "^22.15.2",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.31.0"
   }
 }

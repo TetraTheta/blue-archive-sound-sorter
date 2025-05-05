@@ -1,6 +1,6 @@
 # Blue Archive Sound Sorter
 
-Extract/Convert/Tag BGM files from MediaPatch directory of Blue Archive JP. 
+Extract/Convert/Tag BGM files from MediaPatch directory of Blue Archive JP version.
 
 > [!CAUTION]
 > **LEGAL NOTICE**  
@@ -8,24 +8,26 @@ Extract/Convert/Tag BGM files from MediaPatch directory of Blue Archive JP.
 
 ## Requirement
 
-1. Node +20
-2. FFmpeg executable in `PATH`  
+1. Bun ≥ 1.2.10
+2. FFmpeg executable in `PATH`<br>
    Only if you use `convert` subcommand
 
 ## Usage
 
-### 1. Clone or download repository
+### Clone or download repository
 
 This is not NPM package. You have to either clone or download this repository. It is intentional.
 
 ```bash
-# Clone
-git clone https://github.com/TetraTheta/BlueArchiveSoundSorter
-# Download
+# Method 1. Clone
+git clone https://github.com/TetraTheta/blue-archive-sound-sorter
+# Method 2. Download
 # Just click 'Code - Download ZIP' and extract it somewhere
 ```
 
-### 2. Get MediaPatch from Blue Archive JP
+### Get MediaPatch from Blue Archive JP
+
+You must run Blue Archive JP version to get `MediaPatch` directory.
 
 If you experience problems logging in as a guest, try to install the [Android System Webview](https://play.google.com/store/apps/details?id=com.google.android.webview) package.
 
